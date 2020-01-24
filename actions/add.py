@@ -1,6 +1,7 @@
 from bcolors import bcolors
 
 def add(folder, name, url, desc):
+    folder = folder
     path = "bookmarks/" + folder + ".txt"
     try:
         fp = open(path, 'a')
