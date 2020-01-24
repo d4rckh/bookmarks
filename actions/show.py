@@ -26,9 +26,9 @@ def show(folder):
                         "folder": folder
                     })
             for bookmark in parsed:
-                print(bcolors.OKBLUE + bookmark["name"] + bcolors.ENDC)
-                print(bcolors.OKGREEN + "URL: " + bcolors.ENDC + bcolors.UNDERLINE + bookmark["url"] + bcolors.ENDC)
-                print(bcolors.OKGREEN + "Description: " + bcolors.ENDC + bookmark["description"])
+                print(bcolors.OKBLUE + bookmark["name"] + bcolors.ENDC) # skipcq: FLK-E501
+                print(bcolors.OKGREEN + "URL: " + bcolors.ENDC + bcolors.UNDERLINE + bookmark["url"] + bcolors.ENDC) # skipcq: FLK-E501
+                print(bcolors.OKGREEN + "Description: " + bcolors.ENDC + bookmark["description"]) # skipcq: FLK-E501
     except IOError:
         with open(path, 'w+') as fp:
             show(folder)
