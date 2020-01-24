@@ -2,7 +2,7 @@ import argparse
 from bcolors import bcolors 
 from actions.show import show 
 from actions.add import add 
- 
+
 argumentparser = argparse.ArgumentParser(description="Bookmarks in command line!") # skipcq: FLK-E501
 argumentparser.add_argument('--action', type=str, help="Choose action, can be: add or show") # skipcq: FLK-E501
 argumentparser.add_argument('--folder', type=str, help="Choose folder where to do the action") # skipcq: FLK-E501
@@ -58,6 +58,6 @@ if action == "add":
             else:
                 error('--url is empty, when action=add, you must specify an url using --url') # skipcq: FLK-E501 
         else:
-                error('--desc is empty, when action=add, you must specify an description using --desc') # skipcq: FLK-E501
+            error('--desc is empty, when action=add, you must specify an description using --desc') # skipcq: FLK-E501
     else:
-                error('--name is empty, when action=add, you must specify an name using --name') # skipcq: FLK-E501
+        error('--name is empty, when action=add, you must specify an name using --name') # skipcq: FLK-E501
