@@ -1,3 +1,4 @@
 [[analyzers]]
 name = "python"
 enabled = true
+version = "3.x.x"
