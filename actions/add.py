@@ -4,8 +4,8 @@ def add(folder, name, url, desc):
     folder = folder
     path = "bookmarks/" + folder + ".txt"
     try:
-        fp = open(path, 'a')
-        fp.write(url + ':' + name + ':' + desc + '\n')
+        with open(path, 'a') as fp:
+            fp.write(url + ':' + name + ':' + desc + '\n')
     except IOError:
-        fp = open(path, 'w+')
-        show(folder)
+        with open(path, 'w+') as fp:
+            show(folder)
